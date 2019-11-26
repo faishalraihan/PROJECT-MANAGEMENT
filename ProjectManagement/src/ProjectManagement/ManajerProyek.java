@@ -10,10 +10,11 @@ package ProjectManagement;
  * @author Faishal Raihan
  */
 public class ManajerProyek extends Orang {
-    
 
-    public ManajerProyek(String name, double income, String divisi){
+    private String idManager;
+    public ManajerProyek(String name, double income, String divisi,String idManager){
        super(name,income,divisi); 
+       this.idManager = idManager;
        
     }
     public double getSalary(){
@@ -24,6 +25,13 @@ public class ManajerProyek extends Orang {
     }
     public String getDivisi(){
         return super.getDivisi();
+    }
+    public String getIdManager() {
+        return idManager;
+    }
+
+    public void setIdManager(String idManager) {
+        this.idManager = idManager;
     }
    public void calculateIncome(){
          if(super.getDivisi() == "Web development"){

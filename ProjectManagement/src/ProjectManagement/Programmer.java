@@ -11,9 +11,12 @@ package ProjectManagement;
  */
 public class Programmer extends Orang {
     
-    
-    public Programmer(String nama, double salary, String divisi){
-        super(nama,salary,divisi);
+    private String idProgrammer;
+
+   
+    public Programmer(String name, double salary, String divisi,String idProgrammer){
+        super(name,salary,divisi);
+        this.idProgrammer = idProgrammer;
         
     }
     public double getSalary(){
@@ -26,7 +29,13 @@ public class Programmer extends Orang {
         return super.getDivisi();
     }
     
-    
+    public String getIdProgrammer() {
+        return idProgrammer;
+    }
+
+    public void setIdProgrammer(String idProgrammer) {
+        this.idProgrammer = idProgrammer;
+    } 
     public void calculateIncome(){
          if(super.getDivisi() == "Web development"){
             super.setSalary(getSalary() +(2000000 * 12));

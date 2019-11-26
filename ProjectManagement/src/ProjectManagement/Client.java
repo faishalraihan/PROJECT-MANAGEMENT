@@ -14,17 +14,20 @@ import java.util.Date;
 public class Client {
     private ArrayList<Proyek> daftarProyek = new ArrayList<Proyek>();
     private Proyek proyek;
-    private String clientNama;
+    private String clientName;
+    private int clientAge;
 
-    public Client(String clientNama) {
-        this.clientNama = clientNama;
+    public Client(String clientName,int clientAge) {
+        this.clientName = clientName;
+        this.clientAge = clientAge;
     }
     public String getClientNama() {
-        return clientNama;
+        return clientName;
     }
     public void createProyek(Date deadline){
         proyek = new Proyek(deadline);
     }
+    
     
     
     
